@@ -40,7 +40,7 @@ jobs:
         azcliversion: latest
         inlineScript: |
           az deployment group create \
-            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+            --resource-group $ edevries.ext-rg \
             --template-file $GITHUB_WORKSPACE/infra/deploy.core-infra.json \
             --parameters $GITHUB_WORKSPACE/infra/params.deploy.core-infra.json \
             patToken=${{secrets.PATTOKEN}} repo_name=$GITHUB_REPOSITORY DataLakestorageName=${{ env.STORAGE_ACCOUNT }}
